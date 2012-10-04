@@ -38,6 +38,7 @@
 <div class="content">
 
 <h2>Interactive SNP data visualization with click-and-drag</h2>
+<h3>It takes a while to load the dataset which contains annotations of more than 6000 SNPs.</h3>
     <div id="g1000-score" class="dc-chart">
         <span class="title">1000Genome frequencies</span>
         <a class="reset" href="javascript:g1000ScoreBar.filterAll();dc.redrawAll();" style="">reset</a>
@@ -143,12 +144,12 @@ d3.selectAll("#version").text(dc.version);
 
 // load data from a csv file
 //var data=d3.csv("ga_noNA.csv");
-d3.csv("ga_smaller_noNA.json", function(data) {
+d3.csv("ga_noNA.json", function(data) {
 
             var snps = crossfilter(data);
             var all = snps.groupAll();
             var barChartWidth=400;
-            var barChartHeight=180;
+            var barChartHeight=145;
             var pieChartWidth=256;
             var pieChartHeight=pieChartWidth;
             var pieChartRadius=120;
