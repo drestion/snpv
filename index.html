@@ -132,7 +132,7 @@ d3.selectAll("#version").text(dc.version);
 
 // load data from a csv file
 //var data=d3.csv("ga_noNA.csv");
-d3.csv("ga_noNA.csv", function(data) {
+d3.csv("ga_noNA.json", function(data) {
 
             var snps = crossfilter(data);
             var all = snps.groupAll();
